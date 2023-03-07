@@ -5,13 +5,22 @@ import bulbOff from './images/light-off.svg';
 
 const Light = ({ name, state }) => {
 
-    const [stateVar, setState] = useState(state);
+    let boolState = (state === 'on')
+    /* delsi varianta toho nahore
+    if (state === 'on') {
+        boolState = true;
+    } else {
+        boolState = false;
+    }
+    */
+    
+    const [stateVar, setState] = useState(boolState);
 
     return (
         <>
             <div className="light" onClick={() => setState(!stateVar)}>
                 <div className="light__icon">
-                    <img src={stateVar ? bulbOff : bulbOn} alt=""/>
+                    <img src={stateVar ? bulbOn : bulbOff} alt=""/>
                 </div>
                 <div className="light__name">
                     {name}

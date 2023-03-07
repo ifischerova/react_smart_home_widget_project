@@ -7,21 +7,19 @@ const Blinds = ({ state }) => {
 
     const [stateVar, setStateVar] = useState(state)
 
-
     return (
         
         <>
          <div className="blinds">
 				<div className="blinds__icon">
-					<img src={stateVar ? blindsOpen : blindsClosed} />
+					<img src={stateVar === 'open' ? blindsOpen : blindsClosed} />
 				</div>
 				<div className="blinds__name">
 					Žaluzie
-                    {stateVar}
 				</div>
 				<div className="blinds__controls">
-					<button onClick={() => setStateVar('closed')} className="button button--active">Otevřeno</button>
-					<button onClick={() => setStateVar('open')} className="button">Zavřeno</button>
+					<button onClick={() => setStateVar('closed')} className={stateVar === 'open' ? "button button--active" : "button"}>Otevřeno</button>
+					<button onClick={() => setStateVar('open')} className={stateVar === 'open' ? "button" : "button button--active"}>Zavřeno</button>
 				</div>
 			</div>
         </>
