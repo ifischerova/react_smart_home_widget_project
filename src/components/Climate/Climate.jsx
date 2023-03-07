@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import './climate.css';
 import Temperature from './images/temp.svg';
 
-const Climate = (props) => {
-    const { temperature, humidity } = props;
-
+const Climate = ({ temperature, humidity }) => {
+    
     const [ tempStateVar , setTemperature1 ] = useState(temperature);
 
     return (

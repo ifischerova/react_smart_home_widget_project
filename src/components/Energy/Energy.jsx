@@ -3,8 +3,7 @@ import './energy.css';
 import electricityImg from './images/electricity.svg';
 import waterImg from './images/water.svg';
 
-const Energy = (props) => {
-    const { electricity, water } = props;
+const Energy = ({ electricity, water }) => {
 
     return (
         <>

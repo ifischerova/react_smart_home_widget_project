@@ -2,10 +2,7 @@ import React from 'react';
 import './lights.css';
 import Light from '../Light/Light.jsx';
 
-const Lights = (props) => {
-    const { lights } = props;
-
-    console.log(lights.state)
+const Lights = ({ lights }) => {
 
     return (
         <>
