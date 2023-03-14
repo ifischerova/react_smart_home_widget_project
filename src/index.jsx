@@ -7,8 +7,6 @@ import smartHomeData from './smartHomeData.js';
 
 const data = smartHomeData;
 
-console.log(data);
-
 const App = () => (
   <>
     <div className="container">

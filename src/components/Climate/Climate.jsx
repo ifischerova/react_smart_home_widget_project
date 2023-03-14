@@ -4,7 +4,7 @@ import Temperature from './images/temp.svg';
 
 const Climate = ({ temperature, humidity }) => {
     
-    const [ tempStateVar , setTemperature1 ] = useState(temperature);
+    const [ tempStateVar , setTemperature ] = useState(temperature);
 
     return (
         <>
@@ -17,8 +17,8 @@ const Climate = ({ temperature, humidity }) => {
 					<div className="climate__humidity">Vlhost vzduchu {humidity}&nbsp;%</div>
 				</div>
 				<div className="climate__controls">
-					<button className="button" onClick={() => setTemperature1(tempStateVar + 1)}>+</button>
-					<button className="button" onClick={() => setTemperature1(tempStateVar - 1)}>-</button>
+					<button className="button" onClick={() => setTemperature(tempStateVar + 1)}>+</button>
+					<button className="button" onClick={() => setTemperature(tempStateVar - 1)}>-</button>
 				</div>
 			</div> 
         </>
